@@ -55,54 +55,6 @@ namespace Sistema_Ventas
 
         }
 
-        //private void btnGuardar_Click(object sender, EventArgs e)
-        //{
-        //    string Mensaje = string.Empty;
-        //    Categoria obj = new Categoria()
-        //    {
-        //        ID_Categoria = Convert.ToInt32(txtId.Text),
-        //        Descripcion = txtDescripcion.Text,
-        //        Estado = Convert.ToInt32(((OpcionCombo)cmbEstado.SelectedItem).Valor) == 1 ? true : false
-        //    };
-
-        //    if (obj.ID_Categoria == 0)
-        //    {
-        //        int id_generado = new Negocio_Categoria().Registrar(obj, out Mensaje);
-
-        //        if (id_generado != 0) //si se ha registrado la categoria, llamo a que muestre los datos en el datagridview
-        //        {
-        //            dgwData.Rows.Add(new object[] {"",id_generado,txtDescripcion.Text,
-        //            ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString(),
-        //            ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString(),
-        //            });
-
-        //            Limpiar();
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show(Mensaje);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        bool resultado = new Negocio_Categoria().Editar(obj, out Mensaje);
-        //        if (resultado == true)
-        //        {
-        //            DataGridViewRow row = dgwData.Rows[Convert.ToInt32(txtIndice.Text)];
-        //            row.Cells["Id"].Value = txtId.Text;
-        //            row.Cells["Descripcion"].Value = txtDescripcion.Text;
-        //            row.Cells["EstadoValor"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString();
-        //            row.Cells["Estado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString();
-
-        //            Limpiar();
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show(Mensaje);
-        //        }
-        //    }
-        //}
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string Mensaje = string.Empty;
@@ -179,7 +131,7 @@ namespace Sistema_Ventas
 
                 e.Graphics.DrawImage(Properties.Resources.check, new Rectangle(x, y, w, h)); // aca le indicamos que pinte.
                 e.Handled = true; // permite que la accion del "click" continue
-            }
+            } 
         }
 
         private void dgwData_CellContentClick(object sender, DataGridViewCellEventArgs e)

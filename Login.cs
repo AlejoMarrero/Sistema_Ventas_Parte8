@@ -26,7 +26,6 @@ namespace Sistema_Ventas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            List<Usuario> TEST = new Negocio_Usuario().Listar(); //muestra lista completa de usuarios
             Usuario obj_Usuario = new Negocio_Usuario().Listar().Where(u => u.Documento == txtDocumento.Text && u.Clave == txtClave.Text).FirstOrDefault(); //valida que los datos sean correctos 
             if (obj_Usuario != null)
             {
@@ -46,7 +45,5 @@ namespace Sistema_Ventas
             txtClave.Text = "";
             this.Show(); // metodo para volver a abrir el formulario de login
         }
-
-
     }
 }

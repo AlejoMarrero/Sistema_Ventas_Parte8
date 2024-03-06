@@ -159,12 +159,9 @@ namespace Sistema_Ventas
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2; // esto para pintar en el medio la imagen
                 var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2; // esto para pintar en el medio la imagen
 
-                e.Graphics.DrawImage(Properties.Resources.check, new Rectangle(x,y,w,h)); // aca le indicamos que pinte.
+                e.Graphics.DrawImage(Properties.Resources.check, new Rectangle(x, y, w, h)); // aca le indicamos que pinte.
                 e.Handled = true; // permite que la accion del "click" continue
             }
-
-
-
         }
 
         private void dgwData_CellContentClick(object sender, DataGridViewCellEventArgs e)

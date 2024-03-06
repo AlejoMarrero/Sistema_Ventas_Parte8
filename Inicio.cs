@@ -100,7 +100,7 @@ namespace Sistema_Ventas
 
         private void SubMenuRegistrarCompra_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(menuCompras, new FmrCompras());
+            AbrirFormulario(menuCompras, new FmrCompras(usuario_actual));
         }
 
         private void SubMenuVerDetalleCompra_Click(object sender, EventArgs e)
@@ -123,6 +123,9 @@ namespace Sistema_Ventas
             AbrirFormulario(menuReportes, new FmrReportes());
         }
 
-
+        private void SubMenuNegocio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuMantenimiento, new FmrNegocio());
+        }
     }
 }
